@@ -13,7 +13,7 @@ namespace Task3
             int columns = int.Parse(Console.ReadLine());
             int[,] matrix = new int[lines, columns];
             Random r = new Random();
-            ulong amount = 0;
+            ulong amount = 0; // используется тип ulong, поскольку значение может выходить за пределы int
             for (int i = 0; i < lines; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -61,7 +61,7 @@ namespace Task3
             {
                 Console.WriteLine("Введите угадываемое число");
                 input = Console.ReadLine();
-                if (!int.TryParse(input, out result))
+                if (!int.TryParse(input, out result)) // на случай если пользователь ввёл пустую строку 
                 {
                     Console.WriteLine($"Загаданное число {randNumber}, спасибо за участие");
                     break;
