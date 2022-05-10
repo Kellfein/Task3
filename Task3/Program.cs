@@ -56,7 +56,6 @@ namespace Task3
             int randNumber = random.Next(maxRandom + 1);
             string input;
             int result;
-            Console.WriteLine(randNumber);
             while (true)
             {
                 Console.WriteLine("Введите угадываемое число");
